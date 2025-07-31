@@ -5,10 +5,10 @@ export default function OrderProduct() {
     const router = useRouter();
     const handleClick = () => {
         alert('Order placed successfully!');
-        router.push('/');
-        //router.replace('/');
-        //router.forward('/');
-        //router.back(); 
+        router.push('/'); // it will navigate to the home page
+        //router.replace('/'); it will replace the current url 
+        //router.forward('/'); it will forward the current url
+        //router.back();  it will go back to the previous url
     };
     return (
         <div>

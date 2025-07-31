@@ -1,6 +1,7 @@
 import FooterPage from "@/components/Footer/FooterPage"
 import HeaderPage from "@/components/Header/HeaderPage"
 import { Metadata } from "next"
+import ErrorWrapper from "./error-wrapper";
 
 
 
@@ -26,10 +27,8 @@ export default function RootLayout({
 
       <HeaderPage />
 
-      
-        {children}
-      
-      
+        <ErrorWrapper>{children}</ErrorWrapper>
+        
       <FooterPage />
       </body>
     </html>

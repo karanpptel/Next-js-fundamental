@@ -6,7 +6,14 @@ export const metadata: Metadata = {
     }
 }
 
-export default function Blog() {
+export default async function Blog() {
+
+    //here we can use async await to delay the response of the page
+    await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Intensional Delay")
+        }, 2000)
+    })
     return (
         <div>
             <h1>Blog</h1>

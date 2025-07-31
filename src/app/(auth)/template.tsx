@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // This hook is used to get the current pathname so that active navlinks can be highlighted in the UI.
 import { useState } from "react";
+import './auth-styles.css';
 
 
 
@@ -22,7 +23,7 @@ export default function AuthLayout({
     return(
         <div>
             <div>
-                <input value={input} onChange={(e) => setInput(e.target.value)} />
+                <input type="text" placeholder="Search" value={input} onChange={(e) => setInput(e.target.value)} />
             </div>
             {navLinks.map((link) => {
                 const isActive = pathname.startsWith(link.href);
@@ -30,7 +31,7 @@ export default function AuthLayout({
                     <Link 
                         href={link.href}
                         key={link.name}
-                        className={isActive ? "font-bold mr-4" : "text-blue-500 mr-4"}>
+                        className={isActive ? "font-bold mr-4 text-green-500" : "text-red-800 mr-4"}>
                         {link.name}
                     </Link>
                 )
