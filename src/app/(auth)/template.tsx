@@ -22,8 +22,8 @@ export default function AuthLayout({
     const [input, setInput] = useState('');
     return(
         <div>
-            <div>
-                <input type="text" placeholder="Search" value={input} onChange={(e) => setInput(e.target.value)} />
+            <div className="bg-gray-100 p-4 m-6 ">
+                <input type="text"  placeholder="Search" value={input} onChange={(e) => setInput(e.target.value)} className="border border-gray-300 rounded-md p-3"  />
             </div>
             {navLinks.map((link) => {
                 const isActive = pathname.startsWith(link.href);

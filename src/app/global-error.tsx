@@ -3,10 +3,12 @@ import "./globals.css";
 
 export default function GlobalError() {
   return (
-    <html>
-      <body>
-        <div className="flex flex-col rounded-lg mt-8 relative p-4 border border-gray-300 items-center justify-center min-h-screen">
-          <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
+    <html className="h-full">
+      <body className="h-full">
+        <div className="flex flex-col rounded-lg mt-8 relative p-4 border border-gray-300 items-center justify-center min-h-screen bg-gray-100">
+          <h2 className="text-2xl font-bold mb-4">
+            Whoops, something went wrong. Please refresh the page or try again later.
+          </h2>
           <button
             //refresh the page
             onClick={() => window.location.reload()}
